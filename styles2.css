@@ -1,0 +1,241 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it to the left */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.shop-logo {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    margin-top: 1rem; /* Add some margin to separate from header content */
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* Add padding to the body to prevent content from being hidden under the fixed header */
+body {
+    padding-top: 130px; /* Adjust this based on the header height */
+}
+
+/* Hero Section */
+.hero {
+    background: #555;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+    background: #4CAF50;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+    background-color: #45a049;
+}
+
+.btn-secondary {
+    background: #008CBA;
+}
+
+.btn-secondary:hover {
+    background-color: #007B9E;
+}
+
+/* Products Section */
+.products {
+    padding: 2rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted to allow smaller product items */
+    gap: 1.5rem; /* Reduced gap between products */
+    padding: 0 2rem;
+}
+
+.product-item {
+    background: #f9f9f9;
+    padding: 1rem; /* Reduced padding for smaller product items */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item h3 {
+    margin-top: 0.5rem;
+}
+
+.product-item p {
+    margin: 0.5rem 0;
+}
+
+/* Adjusted product image size */
+.product-image {
+    width: 60%; /* Adjusted width to make images smaller */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Fade-in Animation for Products */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation-delay: 0.3s;
+}
+
+/* Product Item Hover Animation */
+.product-item:hover {
+    transform: scale(1.05); /* Slightly increases the size */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+
+/* About & Contact Sections */
+#about, #contact {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Footer Styles */
+/* Footer Styles */
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0; /* Increased padding for better spacing */
+    margin-top: 2rem;
+}
+
+.footer-contact {
+    margin: 10px 0;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-logo {
+    width: 30px;  /* Set a fixed width for the logos */
+    height: 30px; /* Set a fixed height for the logos */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 50%; /* Makes the corners round (circular shape) */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.social-logo:hover {
+    transform: scale(1.1); /* Slightly scale the logo on hover */
+}
+.footer-description {
+    margin-top: 15px;
+    font-size: 0.9rem; /* Smaller font size for description */
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
